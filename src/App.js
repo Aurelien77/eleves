@@ -32,7 +32,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://reves-de-piano.herokuapp.com/auth/auth", {
+      .get("https://eleves.herokuapp.com/auth/auth", {
         //backend : auth(app)/auth(route)
         headers: {
           accessToken: localStorage.getItem("accessToken"),
