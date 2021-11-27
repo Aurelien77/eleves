@@ -32,7 +32,7 @@ function Profile() {
   };
 
   return (
-    <div className="app">
+    <div className="app margin col-xs-6  col-sm-6 col-md-6   col-lg-6 ">
       <h1> Page de profil public de : {username} </h1>{" "}
       <div className="profil">
         <img
@@ -40,8 +40,17 @@ function Profile() {
           alt="profil"
         />{" "}
       </div>
-      <div className="flexgobal">
-        {/*    <button
+      <div className="boutonpriv">
+        <button
+          onClick={() => {
+            history.push("/postpriv/" + id);
+          }}
+        >
+          {" "}
+          Voir la fiche du professeur
+        </button>{" "}
+      </div>
+      {/*    <button
         onClick={() => {
           history.push("/createpostpriv");
         }}
@@ -49,21 +58,20 @@ function Profile() {
         {" "}
         créer Publication privées
       </button> */}
+      <div className="basicinfo3 ">
+        {" "}
+        {(authState.username === username || authState.admin === true) && (
+          <>
+            <button
+              onClick={() => {
+                history.push("#");
+              }}
+            >
+              {" "}
+              Changer mon mots de passe
+            </button>
 
-        <div className="basicinfo3 ">
-          {" "}
-          {(authState.username === username || authState.admin === true) && (
-            <>
-              <button
-                onClick={() => {
-                  history.push("#");
-                }}
-              >
-                {" "}
-                Changer mon mots de passe
-              </button>
-
-              <form
+            {/*       <form
                 action={"https://eleves.herokuapp.com/upload/" + id}
                 method="POST"
                 enctype="multipart/form-data"
@@ -80,67 +88,59 @@ function Profile() {
                 <button type="submit" class="btn btn-primary">
                   Soumêtre l'image
                 </button>
-              </form>
+              </form> */}
 
-              <button
+            {/*  <button
                 onClick={() => {
                   history.push("/delete");
                 }}
               >
                 {" "}
                 Supprimer le compte
-              </button>
-            </>
-          )}
-        </div>
+              </button> */}
+          </>
+        )}
       </div>
-      <div className="row">
-        {listOfPosts.map((value, key) => {
-          return (
+      {listOfPosts.map((value, key) => {
+        return (
+          <div key={key} className="post3 ">
+            <div className="title"> {value.title} </div>
             <div
-              key={key}
-              className="post2 col-xs-1 col-sm-1 col-md-3 col-lg-3 "
+              className="body"
+              onClick={() => {
+                history.push(`/post/${value.id}`);
+              }}
             >
-              <div className="row">
-                <div className="title"> {value.title} </div>
-                <div
-                  className="body"
-                  onClick={() => {
-                    history.push(`/post/${value.id}`);
-                  }}
-                >
-                  {value.postText}
-                </div>
-                <div className="lien">
-                  <iframe
-                    width="100%"
-                    height="200"
-                    src={value.lien}
-                    frameborder="0"
-                    allowfullscreen
-                  ></iframe>
+              {value.postText}
+            </div>
+            <div className="lien">
+              <iframe
+                width="100%"
+                height="200"
+                src={value.lien}
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
 
-                  {/*  <iframe src={value.lien}></iframe> */}
-                  <a target="blank" href={value.lien}>
-                    {value.lien}
-                  </a>
-                </div>
-                <div className="footer">
-                  <div className="username">{value.username}</div>
-                  {value.createdAT}
-                  <div className="buttons">
-                    <div className="cofee ">
-                      {" "}
-                      <ThumbUpAltIcon />
-                      <label className="labelcof"> {value.Likes.length}</label>
-                    </div>
-                  </div>
+              {/*  <iframe src={value.lien}></iframe> */}
+              <a target="blank" href={value.lien}>
+                {value.lien}
+              </a>
+            </div>
+            <div className="footer">
+              <div className="username">{value.username}</div>
+              {value.createdAT}
+              <div className="buttons">
+                <div className="cofee ">
+                  {" "}
+                  <ThumbUpAltIcon />
+                  <label className="labelcof"> {value.Likes.length}</label>
                 </div>
               </div>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
