@@ -47,7 +47,7 @@ function Profile() {
           }}
         >
           {" "}
-          Voir la fiche du professeur
+          Voir la fiche, publications du profil
         </button>{" "}
       </div>
       {/*    <button

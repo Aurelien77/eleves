@@ -63,7 +63,7 @@ function Registration() {
             id="email"
             className="inputCreatePost"
             name="email"
-            placeholder="(John@groupomania.com...)"
+            placeholder="(John@gmail.com...)"
           />
           <button type="submit"> Enregistrer</button>
         </Form>
