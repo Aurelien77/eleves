@@ -248,6 +248,27 @@ a:link {
   /* align-items: center; */
 }
 
+.profilpriv {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  /* align-items: center; */
+}
+
+.profilpriv img {
+  display: flex;
+  width: 100%;
+  border-radius: 100px;
+  border: #d1515a solid 3px;
+  box-shadow: rgba(15, 15, 12, 2) 0px 2px 8px 0px;
+  height: 450px;
+  margin-bottom: 4%;
+  margin-left: 35%;
+  margin-right: 35%;
+
+  /* align-items: center; */
+}
 .profil img {
   display: flex;
   width: 100%;
@@ -336,6 +357,7 @@ a:link {
 
 .lien {
   display: flex;
+
   color: #122441;
   flex-direction: column;
   margin-top: 2%;
@@ -681,15 +703,16 @@ a:link {
 
 .post3 {
   display: flex;
-
+  /* width: 100%; */
   height: 100%;
-
+  /* margin-left: 10%;
+  margin-right: 10%; */
   border-radius: 10px;
   flex-direction: column;
   align-items: center;
   align-content: center;
   justify-content: center;
-  margin: 1%;
+  margin: 10%;
   color: black;
   border: 1px solid #d1515a;
   font-family: Arial, Helvetica, sans-serif;
@@ -720,10 +743,10 @@ a:link {
 .post3 .body {
   display: flex;
   flex-direction: column;
-  text-align: justify;
+  /* text-align: justify; */
 
-  margin-left: 0%;
-  margin-right: 0%;
+  margin-left: 1%;
+  margin-right: 1%;
   margin-top: 2%;
   font-weight: 500;
   background-color: #f7fdfd;
