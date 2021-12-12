@@ -145,7 +145,7 @@ a:link {
   margin-bottom: 2%;
 
   /*   background-size: cover;
-  background: no-repeat, url(./logos/orig.gif); */
+    background: no-repeat, url(./logos/orig.gif); */
 }
 
 .basicinfo3 button {
@@ -160,7 +160,7 @@ a:link {
   padding: 0px;
   gap: 3%;
   /*   background-size: cover;
-  background: no-repeat, url(./logos/orig.gif); */
+    background: no-repeat, url(./logos/orig.gif); */
 }
 .pseudo {
   color: #d1515a;
@@ -190,10 +190,10 @@ a:link {
   align-items: center;
 }
 /* .speudo span,
-:hover {
-  color: #7c0f16;
-  box-shadow: rgba(5, 25, 52, 2) 0px 2px 8px 0px;
-} */
+  :hover {
+    color: #7c0f16;
+    box-shadow: rgba(5, 25, 52, 2) 0px 2px 8px 0px;
+  } */
 
 .formcommentaire {
   display: flex;
@@ -247,7 +247,10 @@ a:link {
 
   /* align-items: center; */
 }
-
+.profilpriv {
+  display: flex;
+  justify-content: center;
+}
 .profil img {
   display: flex;
   width: 100%;
@@ -723,8 +726,8 @@ a:link {
   flex-direction: column;
   text-align: justify;
 
-  margin-left: 0%;
-  margin-right: 0%;
+  margin-left: 2%;
+  margin-right: 2%;
   margin-top: 2%;
   font-weight: 500;
   background-color: #f7fdfd;
@@ -758,7 +761,7 @@ a:link {
   align-content: center;
   justify-content: center;
   /*   margin-left: 15%;
-  margin-right: 15%; */
+    margin-right: 15%; */
   margin-left: 2%;
   margin-right: 2%;
   margin-top: 2%;

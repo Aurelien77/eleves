@@ -34,7 +34,7 @@ function Postpriv() {
   return (
     <div className="app ">
       <h1> Fiche de : {username} </h1>{" "}
-      <div className="profil">
+      <div className="profilpriv">
         <img
           src={"https://eleves.herokuapp.com/images/" + photo_profil}
           alt="profil"
